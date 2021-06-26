@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
 
-function RenderDirectoryItem({campsite, onClick}) {
+function RenderDirectoryItem({campsite}) {
     return (
         <Card>
             <CardImg width="100%" src={campsite.img} alt={campsite.name} />
