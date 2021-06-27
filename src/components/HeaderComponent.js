@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component }  from 'react';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ class Header extends Component {
 
         this.toggleNav = this.toggleNav.bind(this);
         this.state = {
-            isNavOpen: false
+          isNavOpen: false
         };
     }
 
@@ -19,15 +19,15 @@ class Header extends Component {
         });
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <React.Fragment>
                 <Jumbotron fluid>
                     <div className="container">
                         <div className="row">
                             <div className="col">
-                            <h1>NuCamp</h1>
-                            <h2>a better way to camp</h2>
+                                <h1>NuCamp</h1>
+                                <h2>a better way to camp</h2>
                             </div>
                         </div>
                     </div>
