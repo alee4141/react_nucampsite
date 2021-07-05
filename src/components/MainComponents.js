@@ -4,10 +4,20 @@ import Footer from './FooterComponent';
 import Directory from './DirectoryComponent';
 import Home from './HomeComponent';
 import CampsiteInfo from './CampsiteinfoComponent';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 import Contact from './ContactComponent';
 import About from './AboutComponent'
 
+
+const mapStateToProps = state => {
+    return {
+        campsites: state.campsites,
+        comments: state.comments,
+        partners: state.partners,
+        promotions: state.promotions
+    };
+};
 
 class Main extends Component {
 
@@ -47,4 +57,4 @@ class Main extends Component {
     }
 }
 
-export default Main;
+export default withRouter(connect(mapStateToProps)(Main));
